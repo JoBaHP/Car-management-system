@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "SelRent": 1,
+    "brand": "BMW",
+    "model": "BMW6",
+    "fuel": "petrol",
+    "year": 2020,
+    "price": 1200,
+    "Description": "woooo",
+    "image": "../assets/images/bmw.png"
+  },
+  {
+    "id": 2,
+    "SelRent":2,
+    "brand": "Audi",
+    "model": "R8",
+    "fuel": "diesel",
+    "year": 2020,
+    "price": 155500,
+    "Description": "woooo",
+    "image": "../assets/images/audi-r8.png"
+  },
+  {
+    "id": 3,
+    "SelRent": 1,
+    "brand": "Mercedes",
+    "model": "XL",
+    "fuel": "hibryd",
+    "year": 2020,
+    "price": 1200,
+    "Description": "woooo",
+    "image": "../assets/images/mercedes.png"
+  },
+  {
+    "id": 4,
+    "SelRent":2,
+    "brand": "Ferrari",
+    "model": "xcc",
+    "fuel": "petrol",
+    "year": 2020,
+    "price": 1200,
+    "Description": "woooo",
+    "image": "../assets/images/ferrari.png"
+  },
+  {
+    "id": 5,
+    "SelRent": 1,
+    "brand": "Lamborgini",
+    "model": "Huracane",
+    "fuel": "petrol",
+    "year": 2020,
+    "price": 1200,  
+    "Description": "woooo",
+    "image": "../assets/images/lamborghini.png"
+  },
+  {
+    "id": 6,
+    "SelRent":2,
+    "brand": "Toyota",
+    "model": "Yaris",
+    "fuel": "electric",
+    "year": 2020,
+    "price": 1200,
+    "Description": "woooo",
+    "image": "../assets/images/toyota1.png"
+  }
+]
