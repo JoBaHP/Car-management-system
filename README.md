@@ -8,6 +8,6 @@ In project you can find :
 - template driven form
 - reactive forms
 - alertify service
-- 
+- auth service
 
 
