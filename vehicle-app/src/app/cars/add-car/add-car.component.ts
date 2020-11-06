@@ -17,6 +17,17 @@ export class AddCarComponent implements OnInit {
   furnishTypes: Array<string> = ['Brand New', 'Semi New', 'Used']
   carTypes: Array<string> = ['SUV', 'Economy', 'hatchback', 'sedan']
 
+  carView: ICar = {
+    id: null,
+    brand: '',
+    price: null,
+    model: null,
+    SellRent: null,
+    fuel: null,
+    year: null,
+    image: ''
+  };
+
 
   constructor(private router: Router) { }
 

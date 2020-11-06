@@ -1,7 +1,7 @@
 
 export interface ICar {
   id: number;
-  SelRent: number;
+  SellRent: number;
   brand: string;
   model: string;
   fuel: "petrol" | "diesel" | "gas" | "hibryd" | "electric";

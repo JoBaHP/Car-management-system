@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
-import { ICar } from '../models/ICar';
-import { Observable } from 'rxjs';
 import { connectableObservableDescriptor } from 'rxjs/internal/observable/ConnectableObservable';
+import { Observable } from 'rxjs';
+import { ICar } from '../models/ICar';;
+
 
 
 @Injectable({
@@ -17,11 +18,11 @@ export class CarService {
 
 
 
-  getAllCars(SellRent?: number): Observable<ICar[]> {
-    return this.http.get('../../data/db.json').pipe(
+  getAllCars(SellRent: number): Observable<ICar[]> {
+    return this.http.get('data/db.json').pipe(
       map(data => {
         const carsArray: Array<ICar> = [];
-        const localProperties = JSON.parse(localStorage.getItem('newProp'));
+        //const localProperties = JSON.parse(localStorage.getItem('newProp'));
 
         for (const id in data) {
           if (data.hasOwnProperty(id) && data[id].SellRent === SellRent) {
@@ -32,7 +33,7 @@ export class CarService {
         return carsArray;
       })
     );
-    return this.http.get<ICar[]>('../../data/db.json');
+    return this.http.get<ICar[]>('data/db.json');
   }
 
 

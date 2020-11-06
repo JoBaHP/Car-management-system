@@ -1,18 +1,18 @@
 [
   {
     "id": 1,
-    "SelRent": 1,
+    "SellRent": 1,
     "brand": "BMW",
     "model": "BMW6",
     "fuel": "petrol",
     "year": 2020,
     "price": 1200,
     "Description": "woooo",
-    "image": "../assets/images/bmw.png"
+    "image": "bmw.png"
   },
   {
     "id": 2,
-    "SelRent":2,
+    "SellRent":2,
     "brand": "Audi",
     "model": "R8",
     "fuel": "diesel",
@@ -23,7 +23,7 @@
   },
   {
     "id": 3,
-    "SelRent": 1,
+    "SellRent": 1,
     "brand": "Mercedes",
     "model": "XL",
     "fuel": "hibryd",
@@ -34,7 +34,7 @@
   },
   {
     "id": 4,
-    "SelRent":2,
+    "SellRent":2,
     "brand": "Ferrari",
     "model": "xcc",
     "fuel": "petrol",
@@ -45,7 +45,7 @@
   },
   {
     "id": 5,
-    "SelRent": 1,
+    "SellRent": 1,
     "brand": "Lamborgini",
     "model": "Huracane",
     "fuel": "petrol",
@@ -56,7 +56,7 @@
   },
   {
     "id": 6,
-    "SelRent":2,
+    "SellRent":2,
     "brand": "Toyota",
     "model": "Yaris",
     "fuel": "electric",

@@ -10,10 +10,7 @@ export class CarDetailComponent implements OnInit {
 
   public carId: number;
 
-  constructor(
-    private route: ActivatedRoute,
-    private router: Router
-  ) { }
+  constructor(private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
     this.carId = +this.route.snapshot.params['id'];

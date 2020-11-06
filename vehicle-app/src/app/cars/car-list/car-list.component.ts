@@ -10,8 +10,8 @@ import { CarService } from 'src/app/services/car.service';
 })
 export class CarListComponent implements OnInit {
 
-  public cars: ICar[] = [];
-  public SelRent = 1;
+  public cars: ICar[];
+  public SellRent = 1;
 
   /* = [
    {
@@ -82,12 +82,11 @@ export class CarListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-
     if (this.route.snapshot.url.toString()) {
-      this.SelRent = 2;
+      this.SellRent = 2; // Means we are on rent-property URL else we are on base URL
     }
 
-    this.carService.getAllCars(this.SelRent).subscribe(
+    this.carService.getAllCars(this.SellRent).subscribe(
       data => {
         this.cars = data;
       }, error => {
