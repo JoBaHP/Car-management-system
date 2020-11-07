@@ -7,6 +7,7 @@ In project you can find :
 - ngx-bootstrap
 - template driven forms
 - reactive forms
+- Data sorting, filtering
 - alertify service
 - auth service
 
