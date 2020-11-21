@@ -31,7 +31,7 @@
                   </div>
                 </div>
 
-                <div class="form-group col-12">
+<!--                <div class="form-group col-12">
                   <p>BHK</p>
                   <div class="btn-group" btnRadioGroup>
                     <label
@@ -44,7 +44,7 @@
                       >{{ bhk }}</label
                     >
                   </div>
-                </div>
+                </div>-->
 
                 <div class="form-group col-12">
                   <p>Car Type</p>
@@ -55,13 +55,13 @@
                     [(ngModel)]="carView.model"
                   >
                     <label
-                      *ngFor="let ptype of carTypes"
+                      *ngFor="let ctype of carTypes"
                       class="btn btn-outline-primary mr-2"
-                      [btnRadio]="ptype"
+                      [btnRadio]="ctype"
                       tabindex="0"
                       role="button"
                       name="PropType"
-                      >{{ ptype }}
+                      >{{ ctype }}
                     </label>
                   </div>
                 </div>
@@ -82,11 +82,11 @@
                 </div>
 
                 <div class="form-group col-12">
-                  <label>in Building/Society/Project</label>
+                  <label>Description</label>
                   <input
                     type="text"
                     class="form-control"
-                    #propName="ngModel"
+                    #carName="ngModel"
                     ngModel
                     name="Name"
                     required
@@ -94,22 +94,22 @@
                     [(ngModel)]="carView.brand"
                   />
                   <span
-                    *ngIf="!propName.valid && propName.touched"
+                    *ngIf="!carName.valid && carName.touched"
                     class="error-block"
                   >
-                    <span *ngIf="propName.errors.required"
+                    <span *ngIf="carName.errors.required"
                       >Please provide name</span
                     >
-                    <span *ngIf="propName.errors.minlength"
+                    <span *ngIf="carName.errors.minlength"
                       >Name must be atleast 5 char long</span
                     >
                   </span>
                 </div>
-
+<!--
                 <div class="form-group col-12">
                   <label>City</label>
                   <input type="text" class="form-control" />
-                </div>
+                </div>-->
 
                 <div class="form-group col-12">
                   <button

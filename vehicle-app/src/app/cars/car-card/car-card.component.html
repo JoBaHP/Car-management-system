@@ -1,15 +1,7 @@
 <div class="card">
   <div class="card-img-wrapper">
-    <img
-      *ngIf="car.image"
-      class="card-img-top"
-      src="assets/images/{{ car.image }}.png"
-    />
-    <img
-      *ngIf="!car.image"
-      class="card-img-top"
-      src="assets/images/default-image.png"
-    />
+    <img *ngIf="car.image" class="card-img-top" src="assets/images/{{ car.image }}" />
+    <img *ngIf="!car.image" class="card-img-top" src="assets/images/default-image.png" />
     <ul class="list-inline text-center member-icons animate">
       <li class="list-inline-item">
         <button class="btn btn-primary" routerLink="/car-detail/{{ car.id }}">
