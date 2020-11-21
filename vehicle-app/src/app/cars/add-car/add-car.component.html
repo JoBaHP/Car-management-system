@@ -12,26 +12,14 @@
                 <div class="form-group col-12">
                   <p>I want to</p>
                   <div class="btn-group" btnRadioGroup>
-                    <label
-                      class="btn btn-outline-primary mr-2"
-                      btnRadio="1"
-                      tabindex="0"
-                      role="button"
-                      name="SellRent"
-                      >Sell</label
-                    >
-                    <label
-                      class="btn btn-outline-primary"
-                      btnRadio="2"
-                      tabindex="0"
-                      role="button"
-                      name="SellRent"
-                      >Rent</label
-                    >
+                    <label class="btn btn-outline-primary mr-2" btnRadio="1" tabindex="0" role="button"
+                      name="SellRent">Sell</label>
+                    <label class="btn btn-outline-primary" btnRadio="2" tabindex="0" role="button"
+                      name="SellRent">Rent</label>
                   </div>
                 </div>
 
-<!--                <div class="form-group col-12">
+                <!--                <div class="form-group col-12">
                   <p>BHK</p>
                   <div class="btn-group" btnRadioGroup>
                     <label
@@ -48,140 +36,71 @@
 
                 <div class="form-group col-12">
                   <p>Car Type</p>
-                  <div
-                    class="btn-group"
-                    btnRadioGroup
-                    name="propType"
-                    [(ngModel)]="carView.model"
-                  >
-                    <label
-                      *ngFor="let ctype of carTypes"
-                      class="btn btn-outline-primary mr-2"
-                      [btnRadio]="ctype"
-                      tabindex="0"
-                      role="button"
-                      name="PropType"
-                      >{{ ctype }}
+                  <div class="btn-group" btnRadioGroup name="propType" [(ngModel)]="carView.model">
+                    <label *ngFor="let ctype of carTypes" class="btn btn-outline-primary mr-2" [btnRadio]="ctype"
+                      tabindex="0" role="button" name="PropType">{{ ctype }}
                     </label>
                   </div>
                 </div>
 
                 <div class="form-group col-12">
-                  <p>Furnishing Type</p>
+                  <p> Production</p>
                   <div class="btn-group" btnRadioGroup>
-                    <label
-                      *ngFor="let ftype of furnishTypes"
-                      class="btn btn-outline-primary mr-2"
-                      [btnRadio]="ftype"
-                      tabindex="0"
-                      role="button"
-                      name="FurnishType"
-                      >{{ ftype }}</label
-                    >
+                    <label *ngFor="let ftype of furnishTypes" class="btn btn-outline-primary mr-2" [btnRadio]="ftype"
+                      tabindex="0" role="button" name="FurnishType">{{ ftype }}</label>
                   </div>
                 </div>
 
                 <div class="form-group col-12">
                   <label>Description</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    #carName="ngModel"
-                    ngModel
-                    name="Name"
-                    required
-                    minlength="5"
-                    [(ngModel)]="carView.brand"
-                  />
-                  <span
-                    *ngIf="!carName.valid && carName.touched"
-                    class="error-block"
-                  >
-                    <span *ngIf="carName.errors.required"
-                      >Please provide name</span
-                    >
-                    <span *ngIf="carName.errors.minlength"
-                      >Name must be atleast 5 char long</span
-                    >
+                  <input type="text" class="form-control" #carName="ngModel" ngModel name="Name" required minlength="5"
+                    [(ngModel)]="carView.brand" />
+                  <span *ngIf="!carName.valid && carName.touched" class="error-block">
+                    <span *ngIf="carName.errors.required">Please provide name</span>
+                    <span *ngIf="carName.errors.minlength">Name must be atleast 5 char long</span>
                   </span>
                 </div>
-<!--
+
                 <div class="form-group col-12">
                   <label>City</label>
                   <input type="text" class="form-control" />
-                </div>-->
+                </div>
 
                 <div class="form-group col-12">
-                  <button
-                    type="button"
-                    class="btn btn-primary btn-block"
-                    (click)="selectTab(1)"
-                  >
+                  <button type="button" class="btn btn-primary btn-block" (click)="selectTab(1)">
                     Next
                   </button>
                 </div>
               </tab>
 
-              <tab heading="Pricing and Area">
+              <tab heading="Pricing">
                 <div class="form-group col-12">
-                  <label>Price (in USD)</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    name="price"
-                    [(ngModel)]="carView.price"
-                  />
+                  <label>Price (in EUR)</label>
+                  <input type="text" class="form-control" name="price" [(ngModel)]="carView.price" />
                 </div>
 
                 <div class="form-group col-12">
-                  <label>Security (in USD)</label>
+                  <label>Security (in EUR)</label>
                   <input type="text" class="form-control" />
                 </div>
 
                 <div class="form-group col-12">
-                  <label>Maintenance (in USD)</label>
+                  <label>Maintenance (in EUR)</label>
                   <input type="text" class="form-control" />
                 </div>
 
                 <div class="form-group col-12">
-                  <label>Built Area (in Sqr Feet)</label>
-                  <input type="text" class="form-control" />
-                </div>
-
-                <div class="form-group col-12">
-                  <label>Carpet Area(in Sqr Feet)</label>
-                  <input type="text" class="form-control" />
-                </div>
-
-                <div class="form-group col-12">
-                  <button
-                    type="button"
-                    class="btn btn-primary btn-block"
-                    (click)="selectTab(2)"
-                  >
+                  <button type="button" class="btn btn-primary btn-block" (click)="selectTab(2)">
                     Next
                   </button>
 
-                  <button
-                    type="button"
-                    class="btn btn-primary btn-block"
-                    (click)="selectTab(0)"
-                  >
+                  <button type="button" class="btn btn-primary btn-block" (click)="selectTab(0)">
                     Back
                   </button>
                 </div>
               </tab>
 
               <tab heading="Address">
-                <div class="form-group col-12">
-                  <label>Floor</label>
-                  <input type="text" class="form-control" />
-                </div>
-
-                <div class="form-group col-12">
-                  <label>Total Floor</label>
-                  <input type="text" class="form-control" />
-                </div>
 
                 <div class="form-group col-12">
                   <label>Address</label>
@@ -194,19 +113,11 @@
                 </div>
 
                 <div class="form-group col-12">
-                  <button
-                    type="button"
-                    class="btn btn-primary btn-block"
-                    (click)="selectTab(3)"
-                  >
+                  <button type="button" class="btn btn-primary btn-block" (click)="selectTab(3)">
                     Next
                   </button>
 
-                  <button
-                    type="button"
-                    class="btn btn-primary btn-block"
-                    (click)="selectTab(1)"
-                  >
+                  <button type="button" class="btn btn-primary btn-block" (click)="selectTab(1)">
                     Back
                   </button>
                 </div>
@@ -214,38 +125,20 @@
 
               <tab heading="Other Details">
                 <div class="form-group col-12">
-                  <p>Ready to Move</p>
+                  <p>Ready to Buy/Sell</p>
                   <div class="btn-group" btnRadioGroup>
-                    <label
-                      class="btn btn-outline-primary mr-2"
-                      btnRadio="1"
-                      tabindex="0"
-                      role="button"
-                      name="RTM"
-                      >Yes</label
-                    >
-                    <label
-                      class="btn btn-outline-primary"
-                      btnRadio="2"
-                      tabindex="0"
-                      role="button"
-                      name="RTM"
-                      >No</label
-                    >
+                    <label class="btn btn-outline-primary mr-2" btnRadio="1" tabindex="0" role="button"
+                      name="RTM">Yes</label>
+                    <label class="btn btn-outline-primary" btnRadio="2" tabindex="0" role="button" name="RTM">No</label>
                   </div>
                 </div>
 
                 <div class="form-group col-3">
                   <label>Possession/Avaialble From</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    bsDatepicker
-                    [bsConfig]="{
+                  <input type="text" class="form-control" bsDatepicker [bsConfig]="{
                       containerClass: 'theme-dark-blue',
                       dateInputFormat: 'DD-MM-YYYY'
-                    }"
-                  />
+                    }" />
                 </div>
 
                 <div class="form-group col-12">
@@ -256,86 +149,24 @@
                 <div class="form-group col-12">
                   <p>Gated Community</p>
                   <div class="btn-group" btnRadioGroup>
-                    <label
-                      class="btn btn-outline-primary mr-2"
-                      btnRadio="1"
-                      tabindex="0"
-                      role="button"
-                      name="Gated"
-                      >Yes</label
-                    >
-                    <label
-                      class="btn btn-outline-primary"
-                      btnRadio="2"
-                      tabindex="0"
-                      role="button"
-                      name="Gated"
-                      >No</label
-                    >
-                  </div>
-                </div>
-
-                <div class="form-group col-12">
-                  <p>Ready to Move</p>
-                  <div class="btn-group" btnRadioGroup>
-                    <label
-                      class="btn btn-outline-primary mr-2"
-                      btnRadio="1"
-                      tabindex="0"
-                      role="button"
-                      name="Entrance"
-                      >East</label
-                    >
-                    <label
-                      class="btn btn-outline-primary"
-                      btnRadio="2"
-                      tabindex="0"
-                      role="button"
-                      name="Entrance"
-                      >West</label
-                    >
-                    <label
-                      class="btn btn-outline-primary"
-                      btnRadio="3"
-                      tabindex="0"
-                      role="button"
-                      name="Entrance"
-                      >South</label
-                    >
-                    <label
-                      class="btn btn-outline-primary"
-                      btnRadio="4"
-                      tabindex="0"
-                      role="button"
-                      name="Entrance"
-                      >North</label
-                    >
+                    <label class="btn btn-outline-primary mr-2" btnRadio="1" tabindex="0" role="button"
+                      name="Gated">Yes</label>
+                    <label class="btn btn-outline-primary" btnRadio="2" tabindex="0" role="button"
+                      name="Gated">No</label>
                   </div>
                 </div>
 
                 <div class="form-group col-12">
                   <label>Description</label>
-                  <textarea
-                    type="text"
-                    class="form-control"
-                    rows="6"
-                  ></textarea>
+                  <textarea type="text" class="form-control" rows="6"></textarea>
                 </div>
 
                 <div class="form-group col-12">
-                  <button
-                    type="button"
-                    class="btn btn-primary btn-block"
-                    (click)="selectTab(4)"
-                  >
+                  <button type="button" class="btn btn-primary btn-block" (click)="selectTab(4)">
                     Next
                   </button>
 
-                  <button
-                    type="button"
-                    class="btn btn-primary btn-block"
-                    (click)="selectTab(2)"
-                  >
+                  <button type="button" class="btn btn-primary btn-block" (click)="selectTab(2)">
                     Back
                   </button>
                 </div>
@@ -349,11 +180,7 @@
                   </div>
                 </div>
                 <div class="form-group col-12">
-                  <button
-                    type="button"
-                    class="btn btn-primary btn-block"
-                    (click)="selectTab(3)"
-                  >
+                  <button type="button" class="btn btn-primary btn-block" (click)="selectTab(3)">
                     Back
                   </button>
                   <button type="submit" class="btn btn-primary btn-block">
