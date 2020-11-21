@@ -7,7 +7,7 @@
     "fuel": "petrol",
     "year": 2020,
     "price": 1200,
-    "Description": "woooo",
+    "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Neque ornare aenean euismod elementum nisi quis eleifend. Tincidunt dui ut ornare lectus sit.",
     "image": "bmw.png"
   },
   {
@@ -18,7 +18,7 @@
     "fuel": "diesel",
     "year": 2020,
     "price": 155500,
-    "Description": "woooo",
+    "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Neque ornare aenean euismod elementum nisi quis eleifend. Tincidunt dui ut ornare lectus sit.",
     "image": "audi-r8.png"
   },
   {
@@ -29,7 +29,7 @@
     "fuel": "hibryd",
     "year": 2020,
     "price": 1200,
-    "Description": "woooo",
+    "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Neque ornare aenean euismod elementum nisi quis eleifend. Tincidunt dui ut ornare lectus sit.",
     "image": "mercedes.png"
   },
   {
@@ -40,7 +40,7 @@
     "fuel": "petrol",
     "year": 2020,
     "price": 1200,
-    "Description": "woooo",
+    "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Neque ornare aenean euismod elementum nisi quis eleifend. Tincidunt dui ut ornare lectus sit.",
     "image": "ferrari.png"
   },
   {
@@ -51,7 +51,7 @@
     "fuel": "petrol",
     "year": 2020,
     "price": 1200,
-    "Description": "woooo",
+    "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Neque ornare aenean euismod elementum nisi quis eleifend. Tincidunt dui ut ornare lectus sit.",
     "image": "lamborghini.png"
   },
   {
@@ -62,7 +62,7 @@
     "fuel": "electric",
     "year": 2020,
     "price": 1200,
-    "Description": "woooo",
+    "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Neque ornare aenean euismod elementum nisi quis eleifend. Tincidunt dui ut ornare lectus sit.",
     "image": "toyota1.png"
   }
 ]
