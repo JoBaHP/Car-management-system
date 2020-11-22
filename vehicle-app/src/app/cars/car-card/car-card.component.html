@@ -27,15 +27,18 @@
     <img *ngIf="car.image" class="card-img-top" src="assets/images/{{ car.image }}" alt="Card image cap">
     <img *ngIf="!car.image" class="card-img-top default" src="assets/images/default.png" alt="Card image cap" />
   </div>
-  <div class="card-body">
-    <h5 class="card-title">{{ car.brand }}</h5>
+  <div class="card-body p-1">
+    <h5 class="card-title ">{{ car.brand }}</h5>
     <h6 class="card-subtitle mb-2 text-muted">{{ car.model }}</h6>
-    <p class="card-text">{{car.Description}}
-    </p>
+    <h6 class="card-subtitle mb-2 text-muted">{{ car.city }}</h6>
+    <h6 class="card-subtitle mb-2 ">{{ car.FType }}</h6>
+    <hr class="mt-0 mb-2">
+    <p class="card-text">{{car.description}} </p>
   </div>
   <ul class="list-group list-group-flush">
     <li class="list-group-item">Year of production: {{ car.year }}</li>
     <li class="list-group-item">Fuel: {{ car.fuel }}</li>
+    <li class="list-group-item">Type: {{ car.CType }}</li>
   </ul>
   <div class="card-body">
     <a href="#" class="card-link" routerLink="/car-detail/{{ car.id }}">Car detail</a>
