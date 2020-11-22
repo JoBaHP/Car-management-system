@@ -1,5 +1,5 @@
 <div class="row mb-5">
-  <div class="col-8">
+  <div class="col-8 shadow-lg p-0 bg-white">
     <div class="card">
       <div class="card-header">
         <h3>List your Car</h3>
@@ -7,7 +7,7 @@
       <div class="card-body">
         <form (ngSubmit)="onSubmit()" #Form="ngForm">
           <div>
-            <tabset #formTabs>
+            <tabset class="member-tabset" #formTabs>
               <tab heading="Basic Info">
                 <div class="form-group col-12">
                   <p>I want to</p>
@@ -52,7 +52,7 @@
                 </div>
 
                 <div class="form-group col-12">
-                  <label>Description</label>
+                  <label>Brand</label>
                   <input type="text" class="form-control" #carName="ngModel" ngModel name="Name" required minlength="5"
                     [(ngModel)]="carView.brand" />
                   <span *ngIf="!carName.valid && carName.touched" class="error-block">
@@ -199,9 +199,9 @@
   <div class="col-4">
     <div class="card-header">
       <h3>Your Car Preview</h3>
-      <div>
-        <app-car-card [car]="carView"></app-car-card>
-      </div>
+    </div>
+    <div class="shadow-lg p-3 bg-white">
+      <app-car-card [car]="carView"></app-car-card>
     </div>
   </div>
 </div>
