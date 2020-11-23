@@ -4,11 +4,10 @@ export class Car {
   brand: string;
   model: string;
   year: number;
-  fuel: "petrol" | "diesel" | "gas" | "hibryd" | "electric";
+  fuel: 'petrol' | 'diesel' | 'gas' | 'hibryd' | 'electric';
   Price: number;
   Image?: string;
   Description?: string;
-
 }
 
 /* Brand

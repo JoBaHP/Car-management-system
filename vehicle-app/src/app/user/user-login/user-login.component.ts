@@ -10,14 +10,13 @@ import { AuthService } from 'src/app/services/auth.service';
   styleUrls: ['./user-login.component.scss']
 })
 export class UserLoginComponent implements OnInit {
-
   constructor(
     private alertify: AlertifyService,
     private router: Router,
-    private authService: AuthService) { }
+    private authService: AuthService
+  ) {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   onLogin(loginForm: NgForm) {
     const token = this.authService.authUser(loginForm);
@@ -26,7 +25,5 @@ export class UserLoginComponent implements OnInit {
       this.alertify.success('Login successful');
       this.router.navigate(['/']);
     } else this.alertify.error('Login not Successful');
-
   }
-
 }

@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CarCardComponent } from './cars/car-card/car-card.component';
@@ -46,12 +45,7 @@ import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
     ButtonsModule.forRoot(),
     BsDatepickerModule.forRoot()
   ],
-  providers: [
-    CarService,
-    UserServiceService,
-    AlertifyService,
-    AuthService
-  ],
+  providers: [CarService, UserServiceService, AlertifyService, AuthService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

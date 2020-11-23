@@ -7,23 +7,19 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./car-detail.component.scss']
 })
 export class CarDetailComponent implements OnInit {
-
   public carId: number;
 
-  constructor(private route: ActivatedRoute, private router: Router) { }
+  constructor(private route: ActivatedRoute, private router: Router) {}
 
   ngOnInit(): void {
     this.carId = +this.route.snapshot.params['id'];
-    this.route.params.subscribe(
-      (params) => {
-        this.carId = +params['id'];
-      }
-    );
+    this.route.params.subscribe((params) => {
+      this.carId = +params['id'];
+    });
   }
 
   onSelectNext() {
     this.carId += 1;
     this.router.navigate(['car-detail', this.carId]);
   }
-
 }

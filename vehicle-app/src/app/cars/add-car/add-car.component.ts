@@ -10,12 +10,11 @@ import { ICarBase } from 'src/app/models/icarbase';
   styleUrls: ['./add-car.component.scss']
 })
 export class AddCarComponent implements OnInit {
-
   @ViewChild('Form') addCarForm: NgForm;
   @ViewChild('formTabs') formTabs: TabsetComponent;
 
-  furnishTypes: Array<string> = ['Brand New', 'Semi New', 'Used']
-  carTypes: Array<string> = ['SUV', 'Economy', 'hatchback', 'sedan']
+  furnishTypes: Array<string> = ['Brand New', 'Semi New', 'Used'];
+  carTypes: Array<string> = ['SUV', 'Economy', 'hatchback', 'sedan'];
 
   carView: ICarBase = {
     id: null,
@@ -31,11 +30,9 @@ export class AddCarComponent implements OnInit {
     image: ''
   };
 
+  constructor(private router: Router) {}
 
-  constructor(private router: Router) { }
-
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   onBack() {
     this.router.navigate(['/']);
@@ -48,5 +45,4 @@ export class AddCarComponent implements OnInit {
   selectTab(tabId: number) {
     this.formTabs.tabs[tabId].active = true;
   }
-
 }

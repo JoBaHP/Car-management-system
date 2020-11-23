@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import {
+  FormBuilder,
+  FormControl,
+  FormGroup,
+  Validators
+} from '@angular/forms';
 import { UserServiceService } from 'src/app/services/user-service.service';
 import { User } from '../../models/user';
 import { AlertifyService } from '../../services/alertify.service';
@@ -10,7 +15,6 @@ import { AlertifyService } from '../../services/alertify.service';
   styleUrls: ['./user-register.component.scss']
 })
 export class UserRegisterComponent implements OnInit {
-
   registerationForm: FormGroup;
   user: User;
   userSubmitted: boolean;
@@ -18,9 +22,8 @@ export class UserRegisterComponent implements OnInit {
   constructor(
     private userService: UserServiceService,
     private alertify: AlertifyService,
-    private fb: FormBuilder,) {
-
-  }
+    private fb: FormBuilder
+  ) {}
 
   ngOnInit() {
     this.crateRegistrationForm();
@@ -34,18 +37,22 @@ export class UserRegisterComponent implements OnInit {
         ); */
   }
   passwordMatchingValidatior(fg: FormGroup): Validators {
-    return fg.get('password').value === fg.get('confirmPassword').value ? null :
-      { notmatched: true };
+    return fg.get('password').value === fg.get('confirmPassword').value
+      ? null
+      : { notmatched: true };
   }
 
   crateRegistrationForm() {
-    this.registerationForm = this.fb.group({
-      userName: [null, Validators.required],
-      email: [null, [Validators.required, Validators.email]],
-      password: [null, [Validators.required, Validators.minLength(8)]],
-      confirmPassword: [null, [Validators.required]],
-      mobile: [null, [Validators.required, Validators.maxLength(10)]]
-    }, { validators: this.passwordMatchingValidatior })
+    this.registerationForm = this.fb.group(
+      {
+        userName: [null, Validators.required],
+        email: [null, [Validators.required, Validators.email]],
+        password: [null, [Validators.required, Validators.minLength(8)]],
+        confirmPassword: [null, [Validators.required]],
+        mobile: [null, [Validators.required, Validators.maxLength(10)]]
+      },
+      { validators: this.passwordMatchingValidatior }
+    );
   }
 
   onSubmit() {
@@ -64,15 +71,13 @@ export class UserRegisterComponent implements OnInit {
   }
 
   userDate() {
-    return this.user = {
+    return (this.user = {
       userName: this.userName.value,
       email: this.email.value,
       password: this.password.value,
       mobile: this.mobile.value
-    }
+    });
   }
-
-
 
   // ------------------------------------
   // Getter methods for all form controls
@@ -94,5 +99,4 @@ export class UserRegisterComponent implements OnInit {
     return this.registerationForm.get('mobile') as FormControl;
   }
   // ------------------------
-
 }

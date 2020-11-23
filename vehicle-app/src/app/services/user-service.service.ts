@@ -5,8 +5,7 @@ import { User } from '../models/user';
   providedIn: 'root'
 })
 export class UserServiceService {
-
-  constructor() { }
+  constructor() {}
 
   addUser(user: User) {
     let users = [];

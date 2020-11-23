@@ -9,7 +9,6 @@ import { CarService } from 'src/app/services/car.service';
   styleUrls: ['./car-list.component.scss']
 })
 export class CarListComponent implements OnInit {
-
   public cars: ICar[];
   public SellRent = 1;
 
@@ -76,10 +75,7 @@ export class CarListComponent implements OnInit {
    },
  ] */
 
-  constructor(
-    private route: ActivatedRoute,
-    private carService: CarService) {
-  }
+  constructor(private route: ActivatedRoute, private carService: CarService) {}
 
   ngOnInit(): void {
     if (this.route.snapshot.url.toString()) {
@@ -87,9 +83,10 @@ export class CarListComponent implements OnInit {
     }
 
     this.carService.getAllCars(this.SellRent).subscribe(
-      data => {
+      (data) => {
         this.cars = data;
-      }, error => {
+      },
+      (error) => {
         console.log('httperror:');
         console.log(error);
       }
@@ -103,6 +100,4 @@ export class CarListComponent implements OnInit {
   )
 }
 */
-
-
 }

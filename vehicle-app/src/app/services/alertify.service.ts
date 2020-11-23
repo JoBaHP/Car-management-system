@@ -5,9 +5,7 @@ import * as alertyfy from 'alertifyjs';
   providedIn: 'root'
 })
 export class AlertifyService {
-
-  constructor() { }
-
+  constructor() {}
 
   success(message: string) {
     alertyfy.success(message);
@@ -20,7 +18,4 @@ export class AlertifyService {
   error(message: string) {
     alertyfy.error(message);
   }
-
-
 }
-

@@ -7,14 +7,10 @@ import { ICarBase } from 'src/app/models/icarbase';
   styleUrls: ['./car-card.component.scss']
 })
 export class CarCardComponent implements OnInit {
-
   @Input() car: ICarBase;
   @Input() hideIcons: boolean;
 
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

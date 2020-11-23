@@ -1,11 +1,10 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { AddCarComponent } from './cars/add-car/add-car.component';
 import { CarDetailComponent } from './cars/car-detail/car-detail.component';
 import { CarListComponent } from './cars/car-list/car-list.component';
 import { UserLoginComponent } from './user/user-login/user-login.component';
 import { UserRegisterComponent } from './user/user-register/user-register.component';
-
 
 const routes: Routes = [
   { path: '', component: CarListComponent },
@@ -21,4 +20,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
